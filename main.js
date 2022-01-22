@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 import backgroundImg from './assets/background.jpg';
-import sunTexture from './assets/sunTexture.jpg';
+import sunTextureImg from './assets/sunTexture.jpg';
 import texture0 from './assets/texture0.jpg';
 import texture1 from './assets/texture1.jpg';
 import texture2 from './assets/texture2.jpg';
@@ -51,7 +51,7 @@ Array(600).fill().forEach(addStar);
 const spaceTexture = new THREE.TextureLoader().load(backgroundImg);
 scene.background = spaceTexture;
 
-const sunTexture = new THREE.TextureLoader().load(sunTexture);
+const sunTexture = new THREE.TextureLoader().load(sunTextureImg);
 
 const sun = new THREE.Mesh(
   new THREE.SphereGeometry(16, 30, 30),
