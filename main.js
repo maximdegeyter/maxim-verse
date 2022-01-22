@@ -40,10 +40,10 @@ const addStar = () => {
 
 Array(600).fill().forEach(addStar);
 
-const spaceTexture = new THREE.TextureLoader().load('assets/background.jpg');
+const spaceTexture = new THREE.TextureLoader().load('./assets/background.jpg');
 scene.background = spaceTexture;
 
-const sunTexture = new THREE.TextureLoader().load('assets/sunTexture.jpg');
+const sunTexture = new THREE.TextureLoader().load('./assets/sunTexture.jpg');
 
 const sun = new THREE.Mesh(
   new THREE.SphereGeometry(16, 30, 30),
@@ -63,7 +63,7 @@ let planet4;
 const planets = [planet0,planet1,planet2,planet3,planet4];
 
 for(let i=0; i<5; i++) {
-  const texture = new THREE.TextureLoader().load(`assets/texture${i}.jpg`);
+  const texture = new THREE.TextureLoader().load(`./assets/texture${i}.jpg`);
   planets[i] = new THREE.Mesh( 
     new THREE.SphereGeometry((Math.random() * 5) + 1.5, 20, 20),
     new THREE.MeshStandardMaterial({
